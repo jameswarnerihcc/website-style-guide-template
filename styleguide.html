@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+        }
+
+        #typography {
+            max-width: 30%;
+        }
+
+        #colors {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .heading {
+            border-bottom: 2px #333 solid;
+        }
+
+        .color-circle {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color:#0000ff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+
+        li {
+            text-align: center;
+            font-size: larger;
+        }
+
+        /* Place your size, colors and fonts for headings inside the tags below*/
+        h1 {
+            /* Example of heading styling:
+                font-family: "Arial Black", sans-serif;
+                color: #333;
+                font-size: 40px;
+            */
+            
+        }
+        h2 {
+
+        }
+        h3 {
+
+        }
+        h4 {
+
+        }
+        h5 {
+
+        }
+        h6 {
+            
+        }
+
+        p {
+            /* Place your paragraph size, color, and fonts here*/
+        }
+
+        a {
+            /* Place your link syles here. Example:
+                color: #333;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: "Arial Black", sans-serif;
+            */
+            
+        }
+
+        #link-style {
+            /* Place your link colors and styles here */
+        }
+
+        li:nth-child(1) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+        li:nth-child(3) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+        li:nth-child(5) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+        li:nth-child(7) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+        li:nth-child(9) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+        li:nth-child(11) {
+            /* Place your colors here as background-color. Example: 
+                background-color:#0000f0;
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="typography">
+        <h1 class="heading">Typography</h1>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis eros vitae risus aliquet, id laoreet nisi porta.</p>
+
+        <a id="link-style" href="#">This is a link</a>
+    </div>
+    
+    <div id="colors">
+        <h1 class="heading">Colors</h1>
+        <ul>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+            <li class="color-circle"></li>
+            <li class="color-text">#0000ff</li>
+        </ul>
+    </div>
+    <script>
+        var colors = document.getElementsByClassName('color-circle');
+        var colorsText = document.getElementsByClassName('color-text');
+
+        // https://stackoverflow.com/questions/1740700/how-to-get-hex-color-value-rather-than-rgb-value
+        const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
+        
+        // loop through each color-circle, and display background color hexcode in color-text
+        for (var i = 0; i < colors.length; i++) {
+            colorsText[i].innerHTML = rgb2hex(window.getComputedStyle(colors[i]).getPropertyValue("background-color"));
+        }
+    </script>
+</body>
+</html>
