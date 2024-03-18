@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alike&family=B612+Mono&family=Poppins&family=VT323&display=swap" rel="stylesheet">
     <style>
+        :root {
+            /* I am using CSS variables to define my colors and reuse them */ 
+            --primary-color: #20231B;
+            --secondary-color: #697268;
+            --tertiary-color: #B7D1DA;
+            --tertiary-alternate-color: #538EA2;
+            --background-color: #E9ECEC;
+            --accent-color: #E2E8DD;
+        }
         body {
             margin: 0;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #fff;
             color: #333;
             display: flex;
             justify-content: center;
@@ -25,6 +37,7 @@
         }
 
         .heading {
+            padding-bottom: 20px;
             border-bottom: 2px #333 solid;
         }
 
@@ -58,25 +71,40 @@
                 color: #333;
                 font-size: 40px;
             */
+            font-family: Alike;
+            color: var(--primary-color);
+            font-size: 40px;
         }
         h2 {
             /* Place styles here */
+            font-family: Alike;
+            color: var(--primary-color);
         }
         h3 {
             /* Place styles here */
+            font-family: Alike;
+            color: var(--primary-color);
         }
         h4 {
             /* Place styles here */
+            font-family: Alike;
+            color: var(--primary-color);
         }
         h5 {
             /* Place styles here */
+            font-family: Alike;
+            color: var(--primary-color);
         }
         h6 {
             /* Place styles here */
+            font-family: Alike;
+            color: var(--primary-color);
         }
 
         p {
             /* Place your paragraph size, color, and fonts here*/
+            font-family: Poppins;
+            color: var(--primary-color);
         }
 
         a {
@@ -86,6 +114,9 @@
                 font-size: 20px;
                 font-family: "Arial Black", sans-serif;
             */
+            font-family: Alike;
+            color: var(--secondary-color);
+            font-size: 20px;
         }
 
         #link-style {
@@ -96,26 +127,32 @@
             /* Place your colors here as background-color. Example: 
                 background-color:#0000f0;
             */
+            background-color: var(--primary-color);
         }
 
         li:nth-child(3) {
             /* Place your colors here as background-color.*/
+            background-color: var(--secondary-color);
         }
 
         li:nth-child(5) {
             /* Place your colors here as background-color.*/
+            background-color: var(--tertiary-color);
         }
 
         li:nth-child(7) {
             /* Place your colors here as background-color.*/
+            background-color: var(--background-color);
         }
 
         li:nth-child(9) {
             /* Place your colors here as background-color.*/
+            background-color: var(--accent-color);
         }
 
         li:nth-child(11) {
             /* Place your colors here as background-color.*/
+            background-color: var(--tertiary-alternate-color);
         }
 
     </style>
